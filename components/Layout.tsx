@@ -1,12 +1,14 @@
 import Head from 'next/head';
 
-export default function Layout({ children }) {
+import type { ReactNode } from 'react';
+
+export default function Layout({ children }: { children: ReactNode }) {
   return (
     <>
       <Head>
         <title>Tailwind CSS</title>
       </Head>
-      <div>{children}</div>
+      <div className='p-4'>{children}</div>
     </>
   );
 }
