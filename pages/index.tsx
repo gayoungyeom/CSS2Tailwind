@@ -22,7 +22,7 @@ export default function Home() {
           <SelectBox name='css' options={TEST} onchange={handleSelectChange} />
         </Box>
         <Box title='TAILWIND CLASS'>
-          <div>{curClass}</div>
+          <div className='w-full text-xl'>{curClass}</div>
         </Box>
       </div>
     </>
