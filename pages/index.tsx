@@ -1,13 +1,17 @@
+import Box from '../components/Box';
 import SelectBox from '../components/SelectBox';
-
-const DUMMY_CSS = ['test1', 'test2', 'test3'];
+import { ASPECT_RATIO } from '../static/LAYOUT';
 
 export default function Home() {
+  const TEST = Object.keys(ASPECT_RATIO);
+
   return (
     <>
       <div className='flex justify-around'>
-        <SelectBox name='css' options={DUMMY_CSS} />
-        <SelectBox name='tailwind' options={DUMMY_CSS} />
+        <Box title='CSS PROPERTY'>
+          <SelectBox name='css' options={TEST} />
+        </Box>
+        <Box title='TAILWIND CLASS' />
       </div>
     </>
   );
