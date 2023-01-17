@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import Box from '../components/Box';
 import SelectBox from '../components/SelectBox';
-import { ASPECT_RATIO } from '../static/LAYOUT';
+import { P2C } from '../static/P2C';
 
 import type { ChangeEvent } from 'react';
 
 export default function Home() {
-  const TEST = Object.keys(ASPECT_RATIO);
+  const TEST = Object.keys(P2C);
 
   const [curClass, setCurClass] = useState('');
 
   const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const selected = e.target.value;
-    setCurClass(ASPECT_RATIO[selected]);
+    setCurClass(P2C[selected]);
   };
 
   return (
