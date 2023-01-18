@@ -6,7 +6,7 @@ import { P2C } from '../static/P2C';
 import type { ChangeEvent } from 'react';
 
 export default function Home() {
-  const TEST = Object.keys(P2C);
+  const OPTIONS = Object.keys(P2C);
 
   const [curClass, setCurClass] = useState('');
 
@@ -19,7 +19,11 @@ export default function Home() {
     <>
       <div className='flex justify-around'>
         <Box title='CSS PROPERTY'>
-          <SelectBox name='css' options={TEST} onchange={handleSelectChange} />
+          <SelectBox
+            name='css'
+            options={OPTIONS}
+            onchange={handleSelectChange}
+          />
         </Box>
         <Box title='TAILWIND CLASS'>
           <div className='w-full text-xl'>{curClass}</div>
